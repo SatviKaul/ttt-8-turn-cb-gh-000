@@ -31,9 +31,9 @@ end
 def turn(board)
   puts "Please enter 1-9:"
   input = gets.strip
-  input_to_index(input)
-  if input.between?(0,8) && !position_taken?(board, input)
-    move(board, input)
+  input1 = input_to_index(input)
+  if input1.between?(0,8) && !position_taken?(board, input1)
+    move(board, input1)
     display_board(board)
   else
     turn(board)
